@@ -35,7 +35,7 @@ export default function PriceChart({ productId }: PriceChartProps) {
           <XAxis dataKey="date" />
           <YAxis />
           <Tooltip 
-            formatter={(value) => [`₹${value.toFixed(2)}`, 'Price']}
+            formatter={(value) => [`₹${(value as number).toFixed(2)}`, 'Price']}
             labelFormatter={(label) => `Date: ${label}`}
           />
           <Line 
